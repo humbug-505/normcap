@@ -45,5 +45,10 @@ setup(
         "notify-py>=0.3.0",
         "importlib-resources>=3.3.0",
     ],
-    entry_points={"console_scripts": ["normcap=normcap.__main__:run"]},
+    entry_points={
+        "console_scripts": [
+            "normcap=normcap.__main__:run",
+            "normcap-configure=normcap.configure:main",
+        ]
+    },
 )

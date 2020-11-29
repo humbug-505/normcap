@@ -6,7 +6,7 @@ def _post_install_win():
     from pathlib import Path
     import sysconfig
     from importlib_resources import files  # type: ignore
-    from win32com.client import Dispatch
+    from win32com.client import Dispatch  # type: ignore
 
     # Package name
     NAME = "Normcap"

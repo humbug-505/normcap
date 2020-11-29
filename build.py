@@ -14,7 +14,7 @@ import normcap
 (Path(importlib_resources.__file__).parent / "version.txt").touch()
 
 ARGS = [
-    f"--name=normcap-v{normcap.__version__}",
+    f"--name=normcap",
     "--clean",
     "--noconfirm",
     # "--onefile",
@@ -39,6 +39,7 @@ if sys.platform.lower().startswith("win"):
     ARGS.extend(
         [
             "--add-data=tessdata;tessdata",
+            "--add-data=normcap/ressources/win_installer.nsi;./",
             "--runtime-hook=rthook.py",
             "--win-private-assemblies",
         ]
